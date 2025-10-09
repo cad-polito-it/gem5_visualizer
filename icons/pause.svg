@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>next</title>
+	<defs>
+		<image  width="146" height="239" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAADvAQMAAAAjCR/SAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAABMklEQVR4nO2YwXHCQAxFvwgz8Q06gE6SzgKdQRm5QQdwwzOBjfSlxXaypgLtxcMT+vra234BNqfjJ+KUsgBEv7gvA73fcN4qe/thhWdzQt/pr9UF2O+cfe2gzYKPA1AFC6xHrIbrmkgesB5nKmLHpLVHWIvBOhY6WFgzVz7WdIS1MEPWdxNmFlRHzF41SFYWwv8HMwsDc9PFXTYZNew2Yo2Bcblge6HuPONKbXYMxot5Mp8/y3z1ZMmSJUuWLFmyZMmSJUuWLJmxl2/sedZ6n0/f8a0M4H9WMGEvc4YxqxnFOMtosZp5+OKjHKTvPEP5k5fQVOQq1LmuhQZ4BXGB5+0ku6GOZTcm7GsMeY4J19ynZkEmUvMh7bkvLQ161LEcrNLMm2Ish6iMmIMaN6nrby3/Amvdet1nHJBJAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="183" y="137"/>
+</svg>
