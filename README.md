@@ -1,7 +1,7 @@
 # Gem5 Pipeline Visualizer
 ## Requirements
-- Qt >= 6.8
-- CMake >= 3.28
+- Qt == 6.8
+- CMake >= 3.28 && CMake < 4.x
 ## Building
 1. Clone the repository
 2. Create build directory
@@ -12,10 +12,14 @@ cd build
 ```
 3. Run CMake
 ```
+export PATH="<path_to_your_qt_installation>/libexec:/<path_to_your_qt_installation>/bin:$PATH"
+export QT_FRAMEWORK_BYPASS_LICENSE_CHECK=1
+export LIBGL_ALWAYS_SOFTWARE=1
 cmake .. -DCMAKE_BUILD_TYPE=Release -DQT_CMAKE_PREFIX_PATH=<path_to_your_qt_installation>
 ```
 The path to Qt should point to the folder that contains the `bin/` subfolder. For instance, on a Linux system on which you have installed Qt 6.8.3 under `/opt` you should run:
 ```
+export PATH="/opt/Qt/6.8.3/gcc_64/libexec:/opt/Qt/6.8.3/gcc_64/bin:$PATH"
 cmake .. -DCMAKE_BUILD_TYPE=Release -DQT_CMAKE_PREFIX_PATH=/opt/Qt/6.8.3/gcc_64
 ```
 4. Run Make
