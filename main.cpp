@@ -20,6 +20,11 @@
 #include <string_view>
 #include <cstdint>
 
+#include "fileparser.h"
+#include "matrixmodel.h"
+#include "listmodelregister.h"
+#include "listmodelstats.h"
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
@@ -40,9 +45,26 @@ int main(int argc, char *argv[])
 
     try
     {
-        // Log log("./gem5.log"); //todo: riscrivi il path giusto
-        // log.print_diagram();
-        // rewrite(log.first_writeback);
+        QObject *root = engine.rootObjects().first();
+		QObject *mainContainer = root->findChild<QObject*>("ContainerDiAntonio");
+		MatrixModel *matrixModel = root->findChild<MatrixModel*>("NEO");
+		ListModelRegister *listModelRegister = root->findChild<ListModelRegister*>("LINDA");
+		ListModelStats *listModelStats = root->findChild<ListModelStats*>("RUST");
+		QObject *rightGL = root->findChild<QObject*>("HTML");
+		QObject *textInput = root->findChild<QObject*>("FABRIZIO");
+		FileParser *parser = root->findChild<FileParser*>("FileParserDiPeppa");
+		if (argc == 2)
+		{
+			if (parser->parseFile(QUrl((std::string("file:") + argv[1]).c_str())))
+			{
+				mainContainer->setProperty("visible", true);
+				matrixModel->setCC(0);
+				listModelRegister->setCC(0);
+				listModelStats->setCC(0);
+				rightGL->setProperty("cc", 0);
+				textInput->setProperty("text", "0");
+			}
+		}
     }
     catch (const std::exception& e)
     {

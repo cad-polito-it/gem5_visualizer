@@ -860,6 +860,7 @@ For more details, please refer to the license documentation included with this p
 
     FileParser {
         id: parser
+		objectName: "FileParserDiPeppa"
         onReadEnded: {
             listModel.setData(parser.getListData());
             listModelRegister.setData(parser.getRegisters());
@@ -875,14 +876,17 @@ For more details, please refer to the license documentation included with this p
 
     MatrixModel {
         id: matrixModel
+		objectName: "NEO"
     }
 
     ListModelRegister {
         id: listModelRegister
+		objectName: "LINDA"
     }
 
     ListModelStats {
         id: listModelStats
+		objectName: "RUST"
     }
 
     required property int listRowIndex
@@ -900,6 +904,7 @@ For more details, please refer to the license documentation included with this p
         anchors.fill: parent
         spacing: 0
         visible: false
+		objectName: "ContainerDiAntonio"
         RowLayout {
             Layout.preferredHeight: 50
             Layout.fillWidth: true
@@ -947,6 +952,7 @@ For more details, please refer to the license documentation included with this p
                     Rectangle {
                         TextInput {
                             id: textInput
+							objectName: "FABRIZIO"
                             //Layout.alignment: Qt.AlignRight
                             //rightPadding: -100
                             text: matrixModel.getCC();
@@ -1150,6 +1156,7 @@ For more details, please refer to the license documentation included with this p
                     property bool showGridlines: false
 
                     id: rightGL
+					objectName: "HTML"
                     model: matrixModel
                     ScrollBar.vertical: ScrollBar {
                             policy: ScrollBar.AsNeeded
