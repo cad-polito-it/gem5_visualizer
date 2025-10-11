@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 		FileParser *parser = root->findChild<FileParser*>("FileParserDiPeppa");
 		if (argc == 2)
 		{
+			parser->clearData();
 			if (parser->parseFile(QUrl((std::string("file:") + argv[1]).c_str())))
 			{
 				mainContainer->setProperty("visible", true);
