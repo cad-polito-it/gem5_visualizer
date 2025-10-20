@@ -40,8 +40,8 @@ QVariant ListModelRegister::data(const QModelIndex &index, int role) const
             }
             break;
         case 2:
-            num = static_cast<int32_t>(split[1].toInt(nullptr, 16));
-            hehe = *(float*)&num;
+            num_u = static_cast<uint32_t>(split[1].toLong(nullptr, 16));
+            hehe = *(float*)&num_u;
             regFormat = QString::number(hehe);
             break;
         case 3:
